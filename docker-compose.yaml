@@ -1,0 +1,13 @@
+version: "4.17"
+services: 
+  electric:
+    build: ./electrical
+    container_name: elect_container1
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/electrical
+      # - ./electrical/node_modules
+    stdin_open: true
+    tty: true
+    command: npm start 
